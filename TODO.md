@@ -13,8 +13,8 @@ Staged development plan for mlpipe. Estimated total: about 103 hours.
 
 **Tasks**
 - [x] Run RabbitMQ in Docker and use the management UI
-- [ ] Write a small Go producer and consumer with the `amqp091-go` client
-- [ ] Demonstrate manual ack, nack with requeue, and prefetch with two consumers
+- [x] Write a small Go producer and consumer with the `amqp091-go` client
+- [x] Demonstrate manual ack, nack with requeue, and prefetch with two consumers
 - [ ] Set up a dead-letter exchange and confirm rejected messages land in it
 
 ---
