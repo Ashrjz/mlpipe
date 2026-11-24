@@ -1,4 +1,4 @@
-module mlpipe
+module github.com/Ashrjz/mlpipe
 
 go 1.27.3
 
