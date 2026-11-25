@@ -8,8 +8,8 @@ import (
 )
 
 func Run(ctx context.Context, cfg config.Config) error {
-	slog.Info("api starting")
+	slog.InfoContext(ctx, "api starting")
 	<-ctx.Done()
-	slog.Info("api stopping")
+	slog.InfoContext(ctx, "api stopping")
 	return nil
 }

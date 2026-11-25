@@ -10,6 +10,7 @@ import (
 
 	"github.com/Ashrjz/mlpipe/internal/api"
 	"github.com/Ashrjz/mlpipe/internal/config"
+	"github.com/Ashrjz/mlpipe/internal/logging"
 	"github.com/Ashrjz/mlpipe/internal/relay"
 	"github.com/Ashrjz/mlpipe/internal/worker"
 )
@@ -38,9 +39,12 @@ func main() {
 
 	cfg, err := config.Load()
 	if err != nil {
-		slog.Error("load config", "err", err)
+		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
+
+	logging.Setup(os.Args[1], cfg.LogLevel)
+	slog.InfoContext(ctx, "config loaded", "config", cfg)
 
 	if err := run(ctx, cfg); err != nil {
 		slog.Error("exited with error", "err", err)

@@ -8,8 +8,8 @@ import (
 )
 
 func Run(ctx context.Context, cfg config.Config) error {
-	slog.Info("relay starting")
+	slog.InfoContext(ctx, "relay starting")
 	<-ctx.Done()
-	slog.Info("relay stopping")
+	slog.InfoContext(ctx, "relay stopping")
 	return nil
 }

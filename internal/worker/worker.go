@@ -8,8 +8,8 @@ import (
 )
 
 func Run(ctx context.Context, cfg config.Config) error {
-	slog.Info("api worker")
+	slog.InfoContext(ctx, "api worker")
 	<-ctx.Done()
-	slog.Info("api worker")
+	slog.InfoContext(ctx, "api worker")
 	return nil
 }

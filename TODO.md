@@ -29,8 +29,8 @@ Staged development plan for mlpipe. Estimated total: about 103 hours.
 - Migrations with `golang-migrate`
 
 **Tasks**
-- [ ] Set up the repo layout and a single binary with `api`, `relay`, and `worker` subcommands
-- [ ] Add config loading and structured logging with correlation-ID fields
+- [x] Set up the repo layout and a single binary with `api`, `relay`, and `worker` subcommands
+- [x] Add config loading and structured logging with correlation-ID fields
 - [ ] Add `/healthz` (liveness) and `/readyz` (checks Postgres, MinIO, and RabbitMQ)
 - [ ] Write a Compose file with Postgres, MinIO, RabbitMQ, and the three services
 - [ ] Create the first migration
